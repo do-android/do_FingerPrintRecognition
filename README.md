@@ -1,0 +1,2 @@
+# do_FingerPrintRecognition
+指纹识别组件,Android系统要求大于6.0. Android是连续验证失败5次之后30秒内不能继续验证
