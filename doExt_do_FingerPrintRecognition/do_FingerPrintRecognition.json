@@ -1,0 +1,87 @@
+{
+  "ID": "do_FingerPrintRecognition",
+  "IsContainer": "0",
+  "Type": "SM",
+  "UIType": "Layout",
+  "Name": "指纹识别",
+  "Version": "Internal",
+  "Description": "指纹识别组件,iOS为基于系统touchID和密码识别验证,需要iPhone5s设备搭载iOS8以上系统,IOS touchID识别策略(系统原生框架识别策略,不可修改,可以对照支付宝查看): Android系统要求大于6.0. Android是连续验证失败5次之后30秒内不能继续验证.",
+  "Icon": "",
+  "BBS": "",
+  "Keyword": "",
+  "IOS": {
+    "Support": 0,
+    "MinVersion": ""
+  },
+  "Android": {
+    "Support": 0,
+    "MinVersion": ""
+  },
+  "Windows": {
+    "Support": 0,
+    "MinVersion": ""
+  },
+  "WindowsPhone": {
+    "Support": 0,
+    "MinVersion": ""
+  },
+  "Html": {
+    "Support": 1,
+    "MinVersion": "5.0"
+  },
+  "Properties": [],
+  "Events": [
+    {
+      "ID": "localizedFallbackButtonClick",
+      "Description": "验证过程中，验证弹框自定义验证按钮点击事件(仅iOS有效，订阅该事件，用户处理自定义验证逻辑步骤)",
+      "ReturnType": "String",
+      "ReturnType_JavaScript": "String",
+      "ReturnDesc": "",
+      "Deprecated": false
+    }
+  ],
+  "syncMethodes": [],
+  "asyncMethodes": [
+    {
+      "ID": "startRecognize",
+      "Name": "启动识别",
+      "Description": "启动识别，识别成功返回true，失败返回false",
+      "ReturnType": "Bool",
+      "ReturnType_JavaScript": "Bool",
+      "ReturnDesc": "识别成功返回true,失败返回false",
+      "Paras": [
+        {
+          "ID": "localizedReason",
+          "Name": "请求验证原因",
+          "Type": "String",
+          "Type_JavaScript": "String",
+          "Required": 0,
+          "DefaultValue": "通过Home键验证已有手机指纹",
+          "Description": "应用程序提供的请求身份验证的原因，显示在向用户呈现的身份验证对话框中。在iOS中会显示在副标题中。该字符串应以用户当前的语言提供，应该简短明了。它不应该包含应用程序名称，因为它出现在身份验证对话框的其他位置。（仅iOS有效）",
+          "Deprecated": false
+        },
+        {
+          "ID": "localizedCancelTitle",
+          "Name": "取消验证按钮标题",
+          "Type": "String",
+          "Type_JavaScript": "String",
+          "Required": 0,
+          "DefaultValue": "取消",
+          "Description": "验证期间向用户呈现的对话框中的取消验证按钮的标题名称。该字符串应以用户当前的语言提供，应该简短明了。（仅iOS有效）",
+          "Deprecated": false
+        },
+        {
+          "ID": "localizedFallbackTitle",
+          "Name": "自定义验证操作按钮标题",
+          "Type": "String",
+          "Type_JavaScript": "String",
+          "Required": 0,
+          "DefaultValue": "前往自定义验证",
+          "Description": "验证期间向用户呈现的对话框中的自定义操作按钮标题名称。该字符串应以用户当前的语言提供，应该简短明了。（仅iOS有效）",
+          "Deprecated": false
+        }
+      ],
+      "Deprecated": false
+    }
+  ]
+}
